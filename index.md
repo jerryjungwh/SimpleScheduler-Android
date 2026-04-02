@@ -1,67 +1,111 @@
-**Privacy Policy**
+# 개인정보처리방침
 
-JerryJung (정우현) built the SimpleScheduler app as an Ad Supported app. This SERVICE is provided by JerryJung (정우현) at no cost and is intended for use as is.
+**심간표(Simple Scheduler)** (이하 "앱")은 정우현(Jerry Jung)(이하 "개발자")이 제공하는 시간표 관리 서비스입니다. 본 개인정보처리방침은 앱 이용 과정에서 수집되는 정보의 종류, 수집 목적, 처리 방법 및 이용자의 권리에 대해 안내합니다.
 
-This page is used to inform visitors regarding my policies with the collection, use, and disclosure of Personal Information if anyone decided to use my Service.
+앱을 설치하거나 이용함으로써 본 개인정보처리방침에 동의하는 것으로 간주됩니다.
 
-If you choose to use my Service, then you agree to the collection and use of information in relation to this policy. The Personal Information that I collect is used for providing and improving the Service. I will not use or share your information with anyone except as described in this Privacy Policy.
+---
 
-The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which is accessible at SimpleScheduler unless otherwise defined in this Privacy Policy.
+## 1. 수집하는 정보
 
-**Information Collection and Use**
+### 1-1. 앱이 직접 수집하는 정보
 
-For a better experience, while using our Service, I may require you to provide us with certain personally identifiable information, including but not limited to Firebase Cloud Message, GooglePlay Serivce, Admob, Crashlytics, Firebase Analytics. The information that I request will be retained on your device and is not collected by me in any way.
+| 항목 | 목적 | 저장 위치 |
+|------|------|-----------|
+| 앱 내부 식별자 (UUID) | 익명 사용자 식별 및 서비스 개선 분석 | 기기 내 저장 (SharedPreferences) |
+| 시간표, 스케줄, 알람 데이터 | 서비스 제공 | 기기 내 저장 (SQLite) |
+| 앱 사용 이벤트 (시간표/스케줄 생성·수정·삭제, 알람 사용, 기능 사용 등) | 서비스 개선 및 사용 패턴 분석 | Firebase Analytics |
+| 화면 조회 기록 | 서비스 개선 | Firebase Analytics |
+| 앱 진입 경로 (직접 실행, 위젯, 알림) | 서비스 개선 | Firebase Analytics |
+| 구독 상태 | 광고 제거 기능 제공 | Google Play Billing |
 
-The app does use third party services that may collect information used to identify you.
+- 앱 내부 식별자(UUID)는 기기에서 무작위로 생성되며, 이름·이메일·전화번호 등 개인을 직접 식별할 수 있는 정보와 연결되지 않습니다.
+- 시간표, 스케줄, 알람 등 사용자 콘텐츠는 **기기 내에만 저장**되며 외부 서버로 전송되지 않습니다.
 
-Link to privacy policy of third party service providers used by the app
+### 1-2. 제3자 서비스가 수집하는 정보
 
-*   [Google Play Services](https://www.google.com/policies/privacy/)
-*   [AdMob](https://support.google.com/admob/answer/6128543?hl=en)
-*   [Google Analytics for Firebase](https://firebase.google.com/policies/analytics)
-*   [Firebase Crashlytics](https://firebase.google.com/support/privacy/)
+앱은 아래 제3자 서비스를 이용하며, 각 서비스는 자체 개인정보처리방침에 따라 정보를 수집할 수 있습니다.
 
-**Log Data**
+| 서비스 | 목적 | 개인정보처리방침 |
+|--------|------|-----------------|
+| Google Play Services | 앱 배포 및 업데이트 | [보기](https://www.google.com/policies/privacy/) |
+| Google AdMob | 광고 게재 | [보기](https://support.google.com/admob/answer/6128543) |
+| Google Play Billing | 구독 결제 처리 | [보기](https://payments.google.com/payments/apis-secure/get_legal_document?ldo=0&ldt=privacynotice) |
+| Firebase Analytics | 사용 통계 분석 | [보기](https://firebase.google.com/support/privacy) |
+| Firebase Crashlytics | 오류 보고 및 안정성 개선 | [보기](https://firebase.google.com/support/privacy) |
 
-I want to inform you that whenever you use my Service, in a case of an error in the app I collect data and information (through third party products) on your phone called Log Data. This Log Data may include information such as your device Internet Protocol (“IP”) address, device name, operating system version, the configuration of the app when utilizing my Service, the time and date of your use of the Service, and other statistics.
+---
 
-**Cookies**
+## 2. 정보의 이용 목적
 
-Cookies are files with a small amount of data that are commonly used as anonymous unique identifiers. These are sent to your browser from the websites that you visit and are stored on your device's internal memory.
+수집된 정보는 다음 목적으로만 이용됩니다.
 
-This Service does not use these “cookies” explicitly. However, the app may use third party code and libraries that use “cookies” to collect information and improve their services. You have the option to either accept or refuse these cookies and know when a cookie is being sent to your device. If you choose to refuse our cookies, you may not be able to use some portions of this Service.
+- 시간표 관리 서비스 제공
+- 광고 게재 및 광고 제거 구독 관리
+- 앱 사용 패턴 분석을 통한 서비스 개선
+- 오류 탐지 및 앱 안정성 향상
+- 사용자 문의 대응
 
-**Service Providers**
+---
 
-I may employ third-party companies and individuals due to the following reasons:
+## 3. 정보의 보유 및 파기
 
-*   To facilitate our Service;
-*   To provide the Service on our behalf;
-*   To perform Service-related services; or
-*   To assist us in analyzing how our Service is used.
+- **기기 내 데이터** (시간표, 스케줄, 알람, 앱 설정): 앱 삭제 시 자동으로 파기됩니다.
+- **Firebase Analytics 데이터**: Google의 데이터 보존 정책에 따라 처리됩니다 (기본 14개월).
+- **구독 정보**: Google Play에서 관리되며, 구독 해지 및 계정 삭제 시 Google 정책에 따라 처리됩니다.
 
-I want to inform users of this Service that these third parties have access to your Personal Information. The reason is to perform the tasks assigned to them on our behalf. However, they are obligated not to disclose or use the information for any other purpose.
+---
 
-**Security**
+## 4. 정보의 제3자 제공
 
-I value your trust in providing us your Personal Information, thus we are striving to use commercially acceptable means of protecting it. But remember that no method of transmission over the internet, or method of electronic storage is 100% secure and reliable, and I cannot guarantee its absolute security.
+개발자는 이용자의 개인정보를 제3자에게 판매, 거래, 임대하지 않습니다. 단, 위 2항에 명시된 제3자 서비스 제공업체가 서비스 운영을 위해 필요한 범위 내에서 정보에 접근할 수 있습니다.
 
-**Links to Other Sites**
+---
 
-This Service may contain links to other sites. If you click on a third-party link, you will be directed to that site. Note that these external sites are not operated by me. Therefore, I strongly advise you to review the Privacy Policy of these websites. I have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services.
+## 5. 이용자의 권리
 
-**Children’s Privacy**
+- **광고 식별자 초기화**: 기기 설정에서 Google 광고 ID를 초기화할 수 있습니다.
+- **분석 데이터 수집 거부**: 기기 설정에서 앱의 데이터 수집을 제한할 수 있습니다.
+- **데이터 삭제**: 앱을 삭제하면 기기에 저장된 모든 데이터가 삭제됩니다.
+- **구독 관리**: Google Play 스토어 → 구독 메뉴에서 구독을 관리하거나 해지할 수 있습니다.
 
-These Services do not address anyone under the age of 13. I do not knowingly collect personally identifiable information from children under 13\. In the case I discover that a child under 13 has provided me with personal information, I immediately delete this from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact me so that I will be able to do necessary actions.
+---
 
-**Changes to This Privacy Policy**
+## 6. 아동의 개인정보 보호
 
-I may update our Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. I will notify you of any changes by posting the new Privacy Policy on this page.
+본 앱은 만 14세 미만의 아동을 대상으로 하지 않으며, 의도적으로 아동의 개인정보를 수집하지 않습니다. 만 14세 미만의 아동이 개인정보를 제공한 사실을 알게 된 경우, 해당 정보를 즉시 삭제합니다.
 
-This policy is effective as of 2020-10-18
+---
 
-**Contact Us**
+## 7. 보안
 
-If you have any questions or suggestions about my Privacy Policy, do not hesitate to contact me at jerryjung2929@gmail.com.
+개발자는 이용자의 정보를 보호하기 위해 합리적인 기술적·관리적 조치를 취하고 있습니다. 그러나 인터넷을 통한 전송이나 전자적 저장 방법이 100% 안전하지는 않으므로, 절대적인 보안을 보장할 수 없습니다.
 
-This privacy policy page was created at [privacypolicytemplate.net](https://privacypolicytemplate.net) and modified/generated by [App Privacy Policy Generator](https://app-privacy-policy-generator.firebaseapp.com/)
+---
+
+## 8. 외부 링크
+
+앱에 포함된 제3자 웹사이트 링크는 개발자가 운영하지 않습니다. 해당 사이트를 방문할 경우 각 사이트의 개인정보처리방침을 확인하시기 바랍니다.
+
+---
+
+## 9. 개인정보처리방침의 변경
+
+본 개인정보처리방침은 수시로 변경될 수 있습니다. 변경 사항은 이 페이지에 게시되며, 게시 즉시 효력이 발생합니다. 중요한 변경이 있을 경우 앱 내 공지를 통해 안내합니다.
+
+---
+
+## 10. 문의
+
+개인정보처리방침에 대한 문의사항이 있으시면 아래로 연락해 주세요.
+
+- 이메일: jerryjung2929@gmail.com
+
+---
+
+시행일: 2026-04-03
+최종 수정일: 2026-04-03
+
+---
+
+[이용약관 보기](https://jerryjungwh.github.io/SimpleScheduler-Android/terms)
