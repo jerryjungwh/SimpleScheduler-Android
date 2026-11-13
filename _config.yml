@@ -1,1 +1,5 @@
 theme: jekyll-theme-slate
+title: 심간표
+locale: ko_KR
+plugins:
+  - jekyll-seo-tag

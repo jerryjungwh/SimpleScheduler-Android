@@ -1,0 +1,31 @@
+{% comment %}
+  심간표 홈페이지(jerryjungwh/jerryjungwh.github.io)와 같은 모양으로 그리는 레이아웃이다.
+  색·글꼴·페이지 틀은 같은 호스트의 /policy.css(홈페이지가 내보냄)에서 온다. 본문은 index.md·terms.md 그대로다.
+  정책 페이지에는 GTM 같은 측정 스크립트를 넣지 않는다(홈페이지 설계 11절). 빠진 것이 아니라 일부러 뺀 것이다.
+{% endcomment %}
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% seo %}
+    <link rel="stylesheet" href="/policy.css">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  </head>
+  <body>
+    <header class="policy-header">
+      <a class="policy-brand" href="/"><img src="/apple-touch-icon.png" alt="" width="32" height="32"><span>심간표</span></a>
+    </header>
+    <main class="page policy">
+{{ content }}
+    </main>
+    <footer class="policy-footer">
+      <ul>
+        <li><a href="{{ '/' | relative_url }}">개인정보처리방침</a></li>
+        <li><a href="{{ '/terms' | relative_url }}">이용약관</a></li>
+        <li><a href="/">심간표 홈</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
