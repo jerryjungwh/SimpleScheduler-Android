@@ -1,32 +1,41 @@
 {% comment %}
   심간표 홈페이지(jerryjungwh/jerryjungwh.github.io)와 같은 모양으로 그리는 레이아웃이다.
-  색·글꼴·페이지 틀은 같은 호스트의 /policy.css(홈페이지가 내보냄)에서 온다. 본문은 index.md·terms.md 그대로다.
+  색·글꼴·페이지 틀은 같은 호스트의 /policy.css(홈페이지가 내보냄)에서 온다. 본문은 각 Markdown 파일 그대로다.
+  한국어 원문(index.md, terms.md)은 front matter가 없고, 영어본(en/index.md, en/terms.md)은 locale: en_US다.
+  언어 링크는 같은 문서의 다른 언어판으로 간다. 원문을 고치면 영어본도 같이 고친다.
   정책 페이지에는 GTM 같은 측정 스크립트를 넣지 않는다(홈페이지 설계 11절). 빠진 것이 아니라 일부러 뺀 것이다.
 {% endcomment %}
 <!doctype html>
-<html lang="ko">
+<html lang="{% if page.locale == 'en_US' %}en{% else %}ko{% endif %}">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% seo title=false %}
-    <title>{{ page.title }} - 심간표</title>
+    <title>{{ page.title }} - {% if page.locale == 'en_US' %}SimpleScheduler (Simganpyo){% else %}심간표{% endif %}</title>
     <link rel="stylesheet" href="/policy.css">
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   </head>
   <body>
     <header class="policy-header">
-      <a class="policy-brand" href="/"><img src="/apple-touch-icon.png" alt="" width="32" height="32"><span>심간표</span></a>
+      <a class="policy-brand" href="{% if page.locale == 'en_US' %}/en/{% else %}/{% endif %}"><img src="/apple-touch-icon.png" alt="" width="32" height="32"><span>{% if page.locale == 'en_US' %}SimpleScheduler{% else %}심간표{% endif %}</span></a>
+      <nav aria-label="{% if page.locale == 'en_US' %}Language{% else %}언어{% endif %}">
+        {% if page.locale == 'en_US' %}<a href="{{ page.url | remove_first: '/en' | remove: '.html' | relative_url }}" hreflang="ko" lang="ko">한국어</a>{% else %}<a href="{{ page.url | prepend: '/en' | remove: '.html' | relative_url }}" hreflang="en" lang="en">English</a>{% endif %}
+      </nav>
     </header>
     <main class="page policy">
 {{ content }}
     </main>
     <footer class="policy-footer">
-      <ul>
+      {% if page.locale == 'en_US' %}<ul>
+        <li><a href="{{ '/en/' | relative_url }}">Privacy Policy</a></li>
+        <li><a href="{{ '/en/terms' | relative_url }}">Terms of Use</a></li>
+        <li><a href="/en/">SimpleScheduler home</a></li>
+      </ul>{% else %}<ul>
         <li><a href="{{ '/' | relative_url }}">개인정보처리방침</a></li>
         <li><a href="{{ '/terms' | relative_url }}">이용약관</a></li>
         <li><a href="/">심간표 홈</a></li>
-      </ul>
+      </ul>{% endif %}
     </footer>
   </body>
 </html>
