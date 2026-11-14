@@ -10,6 +10,8 @@ This is an English translation of the Korean original. If the two differ, the Ko
 
 The App does not provide a sign-up feature. Timetables, schedules, To-Dos, alarms, and App settings are stored on users' devices and are not sent to any separate server of the Developer. However, the App uses the third-party services below for ads, payment and subscription management, usage statistics, and error analysis.
 
+The Developer also runs `simganpyo.com`, a website about the App. Information processed when you use that website is described in Section 1-7.
+
 ---
 
 ## 1. Information Processed
@@ -95,6 +97,31 @@ The Developer uses this information only to the extent necessary to review and a
 
 Users can still use the App's other features without allowing optional permissions. Users can change permissions at any time in Android Settings.
 
+### 1-7. Website Visit Information
+
+The Developer runs `simganpyo.com`, a website about the App. The website has no sign-up or sign-in. It uses **Google Analytics** (installed through Google Tag Manager) to see which posts or searches people arrive from, which pages they read, and whether they press a store button.
+
+| Item | Detail |
+|------|--------|
+| Cookie names and lifetime | `_ga` (2 years), `_ga_<measurement ID>` (2 years). Google Tag Manager itself sets no cookies |
+| Information processed | The random identifier in the cookie, the address of the page visited and of the page before it, any tags on the link you arrived through (utm values), browser, device and operating system information, screen size, language, an approximate region estimated from the IP address, and actions such as pressing a store button or picking an example |
+| Purpose | Understanding how people reach the website and use it, and improving the website |
+| Processed by | Google LLC. How Google processes information on sites that use its services is described in [Google's notice](https://www.google.com/policies/privacy/partners/) |
+| Retention | **14 months**, as set on the Google Analytics property (separate from the cookie lifetime) |
+
+The website collects no directly identifying information such as a name, email address or phone number. Google receives the IP address in order to estimate an approximate region.
+
+The website keeps where a visit came from in the browser's **`sessionStorage`** until the tab is closed, and passes that value in the address of the Google Play button. This is used to count how the App was installed; the value contains nothing that identifies a person.
+
+**How to refuse**
+
+- Visitors in the European Economic Area, the United Kingdom and Switzerland are asked before any measurement starts, and nothing is collected until they agree. Choosing "Decline" sets no cookies.
+- Elsewhere, blocking or deleting cookies in the browser stops the collection.
+- The [Google Analytics Opt-out Add-on](https://tools.google.com/dlpage/gaoptout) refuses it on every site.
+- Refusing cookies does not limit reading the website or going to the store.
+
+The website's visit-statistics cookies are used to improve the service, and the ways to refuse above stop the collection at any time.
+
 ---
 
 ## 2. Purposes of Use
@@ -117,7 +144,7 @@ The Developer does not sell or rent users' information. The following companies 
 
 | Entrusted party (services) | Entrusted tasks | Information processed |
 |---------------|-----------|-----------|
-| Google LLC (Google Play, AdMob, UMP, Firebase) | App distribution and updates, payment processing, ad and consent management, usage statistics, and error analysis | Purchase and transaction information; ad and app interactions; app, device, OS, and diagnostic information; Advertising ID and app instance ID; approximate location based on IP address; and other information each service needs |
+| Google LLC (Google Play, AdMob, UMP, Firebase, Analytics and Tag Manager) | App distribution and updates, payment processing, ad and consent management, usage statistics, error analysis, and website visit statistics | Purchase and transaction information; ad and app interactions; app, device, OS, and diagnostic information; Advertising ID and app instance ID; approximate location based on IP address; and other information each service needs |
 | RevenueCat, Inc. | Purchase verification; subscription status and entitlement management; subscription statistics; the subscription management screen and forwarding of inquiries | Anonymous user ID; Firebase app instance ID; purchase and transaction information; subscription status and history; app, SDK, device, and OS information; language and currency codes; country based on IP address; email addresses and content of inquiries; and the information attached to inquiries in Section 1-5 |
 
 Each company's information processing follows the policies below.
@@ -137,8 +164,9 @@ When third-party services are used, information is processed outside the Republi
 |-------------|-----------|-----------|-----------|----------------|----------------|
 | Google LLC and its related service providers | The United States and other countries where Google has service facilities | The Google information listed in Section 3 | Payment, ads, statistics, error analysis, and providing the App's services | Transmitted over encrypted network connections when users use App, ad, payment, or statistics features | A period in accordance with Google's policies and applicable laws |
 | RevenueCat, Inc. | The United States | The RevenueCat information listed in Section 3 | Purchase verification, entitlement management, subscription statistics, the subscription management screen, and forwarding of inquiries | Transmitted over encrypted network connections when users use subscription features or the subscription management screen | The period necessary to provide the service and meet legal obligations, or until a deletion request is processed |
+| Google LLC | The United States and other countries where Google operates facilities | The website visit information in Section 1-7 | Understanding how people reach and use the website | Sent over an encrypted network when the website is visited | The period set on the Google Analytics property (14 months) and periods under Google's policies |
 
-If users do not want a cross-border transfer, they can choose not to purchase or restore subscriptions and not to use the subscription management screen. In that case, they cannot use paid subscriptions, but they can still use other features. Ad-related processing can be adjusted with the Privacy options feature in Section 1-3 and Android ad settings.
+If users do not want a cross-border transfer, they can choose not to purchase or restore subscriptions and not to use the subscription management screen. In that case, they cannot use paid subscriptions, but they can still use other features. Ad-related processing can be adjusted with the Privacy options feature in Section 1-3 and Android ad settings. If users do not want the cross-border transfer of website visit statistics, the ways to refuse in Section 1-7 stop the collection.
 
 ---
 
@@ -148,6 +176,7 @@ If users do not want a cross-border transfer, they can choose not to purchase or
 - **Google Play purchase information:** It is retained and processed in accordance with Google Play policies and applicable laws.
 - **RevenueCat information:** It is processed in accordance with RevenueCat's policies for the period necessary for subscription management, restoring purchases, responding to inquiries, and legal obligations. If users request deletion, the Developer deletes it to the extent possible using the features RevenueCat provides.
 - **Firebase Analytics and Crashlytics information:** It is processed in accordance with Google's policies and the retention period set by the Developer.
+- **Website visit information:** Processed according to the retention period set on the Google Analytics property (14 months) and Google's policies. Cookies stay in the visitor's browser for up to 2 years and can be deleted there.
 - **AdMob information:** It is processed in accordance with Google's advertising data policies and users' ad privacy settings.
 - **Customer inquiries:** They are retained for the period necessary to resolve inquiries and handle disputes, and then deleted.
 
@@ -164,6 +193,7 @@ Users can manage their information or exercise their rights in the following way
 - Managing and canceling subscriptions in the Payments & subscriptions menu of the Google Play Store or on the App's subscription management screen
 - Relinking valid purchases on the same Google Play account with the App's "Restore purchases" feature
 - Sending requests for access, deletion, or similar regarding subscription information and inquiry records stored with RevenueCat to the email address below
+- On the website, refusing visit statistics by blocking or deleting cookies, through the consent notice where it is shown, or with the Google Analytics Opt-out Add-on
 
 Because the App does not maintain user accounts, the Developer may ask for the RevenueCat anonymous user ID or non-sensitive purchase-related information to verify the requester's identity. The Developer does not ask for passwords, full purchase tokens, or card information.
 
@@ -207,8 +237,8 @@ This Policy may be amended when applicable laws, Google Play policies, the SDKs 
 
 ---
 
-Effective date: 2026-11-07  
-Last updated: 2026-11-09
+Effective date: 2026-11-14  
+Last updated: 2026-11-14
 
 ---
 
