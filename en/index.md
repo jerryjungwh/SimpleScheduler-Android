@@ -103,7 +103,7 @@ The Developer runs `simganpyo.com`, a website about the App. The website has no 
 
 | Item | Detail |
 |------|--------|
-| Cookie names and lifetime | `_ga` (2 years), `_ga_<measurement ID>` (2 years). Google Tag Manager itself sets no cookies |
+| Cookie names and lifetime | `_ga` (2 years), `_ga_PMRQMF0BKL` (2 years). Google Tag Manager itself sets no cookies |
 | Information processed | The random identifier in the cookie, the address of the page visited and of the page before it, any tags on the link you arrived through (utm values), browser, device and operating system information, screen size, language, an approximate region estimated from the IP address, and actions such as pressing a store button or picking an example |
 | Purpose | Understanding how people reach the website and use it, and improving the website |
 | Processed by | Google LLC. How Google processes information on sites that use its services is described in [Google's notice](https://www.google.com/policies/privacy/partners/) |
@@ -238,7 +238,7 @@ This Policy may be amended when applicable laws, Google Play policies, the SDKs 
 ---
 
 Effective date: 2026-11-14  
-Last updated: 2026-11-14
+Last updated: 2026-11-15
 
 ---
 
